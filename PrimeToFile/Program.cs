@@ -20,7 +20,7 @@ namespace PrimeToFile
 
             if (new FileInfo(fullDocPath).Length == 0)
             {
-                using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "primes.txt"), true))
+                using (StreamWriter outputFile = new StreamWriter(fullDocPath, true))
                 {
                     outputFile.WriteLine(2);
                 }
@@ -29,7 +29,7 @@ namespace PrimeToFile
             List<UInt64> Primes = new List<UInt64>();
 
             string[] lines = System.IO.File.ReadAllLines(fullDocPath);
-            string last = File.ReadLines(Path.Combine(docPath, "primes.txt")).Last();
+            string last = File.ReadLines(fullDocPath).Last();
 
             foreach (string line in lines)
             {
@@ -49,7 +49,7 @@ namespace PrimeToFile
                 if (isPrime(i, Primes))
                 {
                     Console.WriteLine(i);
-                    using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "primes.txt"), true))
+                    using (StreamWriter outputFile = new StreamWriter(fullDocPath, true))
                     {
                         outputFile.WriteLine(i);
                     }
