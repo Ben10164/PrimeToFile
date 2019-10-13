@@ -1,0 +1,9 @@
+C:\Users\Ben\source\repos\PrimeToFile\bin\Release\PrimeToFile.exe.config
+C:\Users\Ben\source\repos\PrimeToFile\bin\Release\PrimeToFile.exe
+C:\Users\Ben\source\repos\PrimeToFile\bin\Release\PrimeToFile.pdb
+C:\Users\Ben\source\repos\PrimeToFile\bin\Release\BouncyCastle.Crypto.dll
+C:\Users\Ben\source\repos\PrimeToFile\obj\Release\PrimeToFile.csprojAssemblyReference.cache
+C:\Users\Ben\source\repos\PrimeToFile\obj\Release\PrimeToFile.csproj.CoreCompileInputs.cache
+C:\Users\Ben\source\repos\PrimeToFile\obj\Release\PrimeToFile.csproj.CopyComplete
+C:\Users\Ben\source\repos\PrimeToFile\obj\Release\PrimeToFile.exe
+C:\Users\Ben\source\repos\PrimeToFile\obj\Release\PrimeToFile.pdb
