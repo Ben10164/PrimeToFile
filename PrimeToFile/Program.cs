@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Numerics;
 using System.IO;
-using Org.BouncyCastle;
 
 namespace PrimeToFile
 {
@@ -17,11 +13,7 @@ namespace PrimeToFile
             string docPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             string fullDocPath = Path.Combine(docPath, "primes.txt");
 
-            if (File.Exists(fullDocPath))
-            {
-                //Nothing LOL
-            }
-            else
+            if (!File.Exists(fullDocPath))
             {
                 File.Create(fullDocPath).Close();
             }
