@@ -7,8 +7,11 @@ namespace PrimeToFile
 {
     class Program
     {
+        const int kMaxArrSize = 134212856;
+
         static void Main(string[] args)
         {
+
             // Set a variable to the Documents path.
             string docPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             string fullDocPath = Path.Combine(docPath, "primes.txt");
@@ -23,54 +26,100 @@ namespace PrimeToFile
                 using (StreamWriter outputFile = new StreamWriter(fullDocPath, true))
                 {
                     outputFile.WriteLine(2);
+                    outputFile.WriteLine(3);
                 }
             }
-
+            Console.WriteLine("a");
             List<UInt64> Primes = new List<UInt64>();
-
-            string[] lines = System.IO.File.ReadAllLines(fullDocPath);
-            string last = File.ReadLines(fullDocPath).Last();
-
-            foreach (string line in lines)
+            string[] lines = File.ReadLines(fullDocPath).Take(kMaxArrSize).ToArray();
+            Console.WriteLine("b");
+                foreach (string line in lines)
+                {
+                    try
+                    {
+                        Primes.Add(Convert.ToUInt64(line, 10));
+                    }
+                    catch
+                    {
+                        Console.WriteLine(line);
+                    }
+                }
+            Console.WriteLine("c");
+            List<UInt64> Primes2 = new List<UInt64>();
+            string[] lines2 = File.ReadLines(fullDocPath).Skip(kMaxArrSize).ToArray();
+            Console.WriteLine("d");
+            foreach (string line in lines2)
             {
-                Primes.Add(Convert.ToUInt64(line, 10));
+                Primes2.Add(Convert.ToUInt64(line, 10));
             }
 
+            string last = File.ReadLines(fullDocPath).Last();
 
             Console.WriteLine("Now finished importing previous Prime Numbers from \nthe file located at: \n" + fullDocPath+ "\n");
-            Console.WriteLine(last + " is the last Prime Number calculated, \nThe program will now check more numbers \nstarting on: " + (Convert.ToInt64(last) + 1) +"\n");
+            Console.WriteLine(last + " is the last Prime Number calculated, \nThe program will now check more numbers \nstarting on: " + (Convert.ToInt64(last) + 2) +"\n");
             Console.WriteLine("Btw, coded by Ben Puryear (17, github.com/Ben10164) \n");
             Console.WriteLine("Press any button to continue!");
 
             Console.ReadKey();
 
-            for (UInt64 i = UInt64.Parse(last) + 1; i > 0; i++)
+            for (UInt64 i = UInt64.Parse(last) + 2; i > 0; i+=2)
             {
-                if (isPrime(i, Primes))
+                if (Primes.Count < kMaxArrSize)
                 {
-                    Console.WriteLine(i);
-                    using (StreamWriter outputFile = new StreamWriter(fullDocPath, true))
+                    if (isPrime(i, Primes, Primes2))
                     {
-                        outputFile.WriteLine(i);
+                        Console.WriteLine(i);
+                        using (StreamWriter outputFile = new StreamWriter(fullDocPath, true))
+                        {
+                            outputFile.WriteLine(i);
+                        }
+                        Primes.Add(i);
                     }
-                    Primes.Add(i);
+                }
+                else
+                {
+                    if (isPrime(i, Primes, Primes2))
+                    {
+                        Console.WriteLine(i);
+                        using (StreamWriter outputFile = new StreamWriter(fullDocPath, true))
+                        {
+                            outputFile.WriteLine(i);
+                        }
+                        Primes2.Add(i);
+                    }
                 }
             }
             Console.ReadKey();
         }
 
-        static bool isPrime(UInt64 num, List<UInt64> Primes)
+        static bool isPrime(UInt64 num, List<UInt64> Primes, List<UInt64> Primes2)
         {
             foreach (UInt64 Factor in Primes)
             {
-                if (Factor * Factor > num)
-                {
-                    break;
-                }
-                
                 if (num % Factor == 0)
                 {
                     return false;
+                }
+
+                if (Factor * Factor > num)
+                {
+                    return true;
+                }
+            }
+            //assumes all numbers in the first array are before the second, making checking the second not needed
+            if (Primes.Count >= kMaxArrSize)
+            {
+                foreach (UInt64 Factor in Primes2)
+                {
+                    if (num % Factor == 0)
+                    {
+                        return false;
+                    }
+
+                    if (Factor * Factor > num)
+                    {
+                        return true;
+                    }
                 }
             }
             return true;
