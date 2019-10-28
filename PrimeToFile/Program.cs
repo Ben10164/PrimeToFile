@@ -29,10 +29,14 @@ namespace PrimeToFile
                     outputFile.WriteLine(3);
                 }
             }
-            Console.WriteLine("a");
+            Console.WriteLine("Successfully found file.");
+
+            Console.WriteLine("Now starting the proccess of converting strings from the file into UInt64s.\n");
+
             List<UInt64> Primes = new List<UInt64>();
             string[] lines = File.ReadLines(fullDocPath).Take(kMaxArrSize).ToArray();
-            Console.WriteLine("b");
+            Console.WriteLine("Successfully read in the first array of numbers as string.\n");
+
                 foreach (string line in lines)
                 {
                     try
@@ -41,17 +45,27 @@ namespace PrimeToFile
                     }
                     catch
                     {
-                        Console.WriteLine(line);
+                        Console.WriteLine("Could not convert " + line + " to a UInt64 number.\nIf it is two different prime numbers that are combined, go into the file and seperate them into different lines.");
                     }
                 }
-            Console.WriteLine("c");
+            Console.WriteLine("Successfully converted the first array to UInt64 numbers.\n");
+
             List<UInt64> Primes2 = new List<UInt64>();
             string[] lines2 = File.ReadLines(fullDocPath).Skip(kMaxArrSize).ToArray();
-            Console.WriteLine("d");
+            Console.WriteLine("Successfully read in the second array of numbers as string.\n");
+
             foreach (string line in lines2)
             {
-                Primes2.Add(Convert.ToUInt64(line, 10));
+                try
+                {
+                    Primes2.Add(Convert.ToUInt64(line, 10));
+                }
+                catch
+                {
+                    Console.WriteLine("Could not convert " + line + " to a UInt64 number.\nIf it is two different prime numbers that are combined, go into the file and seperate them into different lines.");
+                }
             }
+            Console.WriteLine("Successfully converted the second array to UInt64 numbers.\n");
 
             string last = File.ReadLines(fullDocPath).Last();
 
