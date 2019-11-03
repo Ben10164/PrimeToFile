@@ -1,7 +1,5 @@
 C:\Users\Ben\source\repos\PrimeToFile\bin\x64\Debug\PrimeToFile.exe.config
 C:\Users\Ben\source\repos\PrimeToFile\bin\x64\Debug\PrimeToFile.exe
 C:\Users\Ben\source\repos\PrimeToFile\bin\x64\Debug\PrimeToFile.pdb
-C:\Users\Ben\source\repos\PrimeToFile\bin\x64\Debug\BouncyCastle.Crypto.dll
-C:\Users\Ben\source\repos\PrimeToFile\obj\x64\Debug\PrimeToFile.csproj.CopyComplete
 C:\Users\Ben\source\repos\PrimeToFile\obj\x64\Debug\PrimeToFile.exe
 C:\Users\Ben\source\repos\PrimeToFile\obj\x64\Debug\PrimeToFile.pdb
