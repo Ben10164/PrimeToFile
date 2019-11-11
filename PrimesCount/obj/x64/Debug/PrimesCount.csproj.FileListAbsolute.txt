@@ -1,0 +1,5 @@
+C:\Users\Ben\source\repos\PrimesCount\bin\x64\Debug\PrimesCount.exe.config
+C:\Users\Ben\source\repos\PrimesCount\bin\x64\Debug\PrimesCount.exe
+C:\Users\Ben\source\repos\PrimesCount\bin\x64\Debug\PrimesCount.pdb
+C:\Users\Ben\source\repos\PrimesCount\obj\x64\Debug\PrimesCount.exe
+C:\Users\Ben\source\repos\PrimesCount\obj\x64\Debug\PrimesCount.pdb
