@@ -1,7 +1,0 @@
-Hey!
-In case these files dont work, or are out of date, or you just want to double check I didnt mess up
-and forget to upload the changed .exe folder as well, to find the 100% guarenteed changed .exe, you should
-go into the folder of the program you want to open, open the obj folder, open 64x, then chose release, or
-debug (I prefer release just because why not), then open the .exe there!
-Thanks!
--Ben
