@@ -1,6 +1,5 @@
 Hey!
 To find the 100% guarenteed changed .exe, you should
-go into the folder of the program you want to open, open the obj folder, open 64x, then chose release, or
-debug (I prefer release just because why not), then open the .exe there!
+go into the folder of the program you want to open, open the obj folder, open x64, then chose release or debug (I recommend release), then open the .exe there!
 Thanks!
 -Ben
