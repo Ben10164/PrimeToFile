@@ -1,0 +1,10 @@
+C:\Users\Ben\source\repos\PrimeToFile\bin\x64\Debug\PrimeToFile.exe.config
+C:\Users\Ben\source\repos\PrimeToFile\bin\x64\Debug\PrimeToFile.exe
+C:\Users\Ben\source\repos\PrimeToFile\bin\x64\Debug\PrimeToFile.pdb
+C:\Users\Ben\source\repos\PrimeToFile\obj\x64\Debug\PrimeToFile.exe
+C:\Users\Ben\source\repos\PrimeToFile\obj\x64\Debug\PrimeToFile.pdb
+C:\Users\Ben\source\repos\Prime\PrimeToFile\bin\x64\Debug\PrimeToFile.exe.config
+C:\Users\Ben\source\repos\Prime\PrimeToFile\bin\x64\Debug\PrimeToFile.exe
+C:\Users\Ben\source\repos\Prime\PrimeToFile\bin\x64\Debug\PrimeToFile.pdb
+C:\Users\Ben\source\repos\Prime\PrimeToFile\obj\x64\Debug\PrimeToFile.exe
+C:\Users\Ben\source\repos\Prime\PrimeToFile\obj\x64\Debug\PrimeToFile.pdb

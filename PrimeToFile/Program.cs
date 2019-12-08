@@ -7,7 +7,7 @@ namespace PrimeToFile
 {
     internal class Program
     {
-        private const int MaxArrSize = 134212856;
+        private const int MaxArrSize = 134212856/2;
 
         public static void ConvertToArray(List<List<UInt64>> PrimesList, string fullDocPath)
         {
@@ -16,10 +16,14 @@ namespace PrimeToFile
             List<UInt64> Primes = new List<UInt64>();
             List<UInt64> Primes2 = new List<UInt64>();
             List<UInt64> Primes3 = new List<UInt64>();
+            List<UInt64> Primes4 = new List<UInt64>();
+            List<UInt64> Primes5 = new List<UInt64>();
 
             PrimesList.Add(Primes);
             PrimesList.Add(Primes2);
             PrimesList.Add(Primes3);
+            PrimesList.Add(Primes4);
+            PrimesList.Add(Primes5);
 
             string[] lines;
 
@@ -38,7 +42,7 @@ namespace PrimeToFile
                         Console.WriteLine("Could not convert " + line + " to a UInt64 number.\nIf it is two different prime numbers that are combined, go into the file and separate them into different lines.");
                     }
                 }
-                Console.WriteLine(pos);
+                Console.WriteLine("PrimesList[" + pos + "] was just imported");
             }
         }
 
