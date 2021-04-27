@@ -1,0 +1,6 @@
+C:\Users\Ben\source\repos\Prime\PrimeToFile\bin\x64\Release\PrimeToFile.exe.config
+C:\Users\Ben\source\repos\Prime\PrimeToFile\bin\x64\Release\PrimeToFile.exe
+C:\Users\Ben\source\repos\Prime\PrimeToFile\bin\x64\Release\PrimeToFile.pdb
+C:\Users\Ben\source\repos\Prime\PrimeToFile\obj\x64\Release\PrimeToFile.csprojAssemblyReference.cache
+C:\Users\Ben\source\repos\Prime\PrimeToFile\obj\x64\Release\PrimeToFile.exe
+C:\Users\Ben\source\repos\Prime\PrimeToFile\obj\x64\Release\PrimeToFile.pdb
