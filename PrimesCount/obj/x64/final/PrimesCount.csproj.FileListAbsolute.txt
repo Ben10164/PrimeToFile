@@ -1,6 +1,0 @@
-C:\Users\Ben\source\repos\PrimesCount\obj\x64\final\PrimesCount.csprojAssemblyReference.cache
-C:\Users\Ben\source\repos\PrimesCount\PrimesCount.exe.config
-C:\Users\Ben\source\repos\PrimesCount\obj\x64\final\PrimesCount.exe
-C:\Users\Ben\source\repos\PrimesCount\obj\x64\final\PrimesCount.pdb
-C:\Users\Ben\source\repos\PrimesCount\PrimesCount.exe
-C:\Users\Ben\source\repos\PrimesCount\PrimesCount.pdb
